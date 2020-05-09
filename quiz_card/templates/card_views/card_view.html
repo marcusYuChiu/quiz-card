@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+    <div id="card-list">
+        <div class="card-template">
+            <div id="question" style="display: block;" onclick="replace_div('question', 'answer')">
+                <p class="content">{{ card_lst[0].question }}</p>
+            </div>
+            <div id="answer" style="display: none;" onclick="replace_div('answer', 'question')">
+                <p class="content">{{ card_lst[0].answer }}</p>
+            </div>
+        </div>
+        <button class="card-button" id="previous" onclick="">Previous</button>
+        <button class="card-button" id="rotation" onclick="">Rotate Card</button>
+        <button class="card-button" id="next" onclick="">Next</button>
+    </div>
+
+    <!-- <script src="js/replace_div.js"></script> -->
+    <script>
+        function replace_div( hide, show ) {
+            document.getElementById(hide).style.display="none";
+            document.getElementById(show).style.display="block";
+        }
+    </script>
+{% endblock %}

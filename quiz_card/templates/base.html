@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Quiz Card</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="navigator">
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">Practice</a></li>
+            <li><a href="">Setting</a></li>
+        </ul>
+    </div>
+    {% block content %}
+    {% endblock %}
+    
+</body>
+</html>

@@ -1,0 +1,39 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    padding: 14px 16px;
+    text-align: center;
+    font-size:25px;
+    color: white;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: rgb(76, 57, 160);
+}
+
+.card {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.content {
+    font-size: 25px;
+}
+
+.card-button {
+    font-size: 30px;
+}
