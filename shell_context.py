@@ -6,4 +6,7 @@ from quiz_card.timer.models import Timers
 
 @app.shell_context_processor
 def shell_context():
-    return {'app':app, 'db':db, 'card':Card, 'timer':Timers}
+    return {'app':app,
+            'db':db,
+            'card':Card,
+            'timer':Timers}

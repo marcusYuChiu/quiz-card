@@ -6,4 +6,5 @@ from wtforms.validators import DataRequired
 class CreateForm(FlaskForm):
     question = TextAreaField('Question', validators=[DataRequired()])
     answer = TextAreaField('Answer', validators=[DataRequired()])
+    link = TextAreaField('Link')
     submit = SubmitField('Submit')

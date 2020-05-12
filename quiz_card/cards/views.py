@@ -25,7 +25,8 @@ def create():
     form = CreateForm()
     if form.validate_on_submit():
         new_card = Card(question=form.question.data,
-                        answer=form.answer.data)
+                        answer=form.answer.data,
+                        link=form.link.data)
         db.session.add(new_card)
         db.session.commit()
         return redirect('/card/')
