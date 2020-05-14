@@ -1,7 +1,7 @@
 import json
 
 
-from flask import Blueprint, render_template, redirect
+from flask import Blueprint, render_template, redirect, url_for
 
 
 from .forms import CreateForm
@@ -33,7 +33,14 @@ def create():
     return render_template('card_views/create_card.html', form=form) 
 
 
+@blueprint.route('/practice', method=['GET', 'POST'])
+def practice():
+    return render_template('card_views/practice.html')
 
+
+@blueprint.route('/result')
+def result():
+    return
 
 
 

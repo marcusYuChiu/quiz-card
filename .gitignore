@@ -4,4 +4,5 @@ __pycache__
 data.db
 venv
 migrations
+sqlite3
 .DS_Store
