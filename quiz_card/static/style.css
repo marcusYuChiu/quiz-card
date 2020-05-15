@@ -37,3 +37,51 @@ li a:hover {
 .card-button {
     font-size: 30px;
 }
+
+.intro {
+    width:20rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    margin-left: 540px;
+    text-align: center;
+    font-size: 25px;
+    font-style: italic;
+    font-family: serif;
+}
+
+.memory-type-container {
+    width: 35rem;
+    margin-left: 450px;
+}
+
+.color-container {
+    float: left;
+}
+
+.memory-type-button {
+    height: 15rem;
+    width: 15rem;
+    margin: 5px;
+    font-size: 30px;
+    font-family: serif;
+    /* color: black; */
+    color: cornsilk;
+    border: none;
+}
+
+#button-red {
+    background-color: indianred;
+}
+
+#button-green {
+    background-color: teal;
+}
+
+#button-yellow {
+    /* background-color: tan; */
+    background-color: peru;
+}
+
+#button-blue {
+    background-color: steelblue;
+}

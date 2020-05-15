@@ -1,4 +1,22 @@
 {% extends "base.html" %}
 {% block content %}
-
+<div class="intro">
+    <p class="intro-content">
+        Each color button represents memory level. Pressing one of them to practice.
+    </p>
+</div>
+<div class="memory-type-container">
+    <div class="color-container">
+        <button type="button" class="memory-type-button" id="button-red" onclick="">Very familiar</button>
+    </div>
+    <div class="color-container">
+        <button type="button" class="memory-type-button" id="button-green" onclick="">Familiar</button>
+    </div>
+    <div class="color-container">
+        <button type="button" class="memory-type-button" id="button-yellow" onclick="">Impress</button>
+    </div>
+    <div class="color-container">
+        <button type="button" class="memory-type-button" id="button-blue" onclick="">No impress</button>
+    </div>
+</div>
 {% endblock %}

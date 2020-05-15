@@ -5,6 +5,10 @@ from datetime import datetime
 from quiz_card.extensions import db
 from quiz_card.timer.models import Timers
 
+# tags = db.Table('tags',
+    # db.Column('tag_id', db.Integer, db.ForeignKey('tag.id'), primary_key=True),
+    # db.Column('card_id', db.Integer, db.ForeignKey('card.id'), primary_key=True)
+# )
 
 class MemoryStatus(enum.Enum):
     red = 'red'
@@ -23,12 +27,12 @@ class Card(db.Model):
     memory_status = db.Column(db.Enum(MemoryStatus),
                               default=MemoryStatus.blue,
                               nullable=False)
-                              uselist=False)
     # tag_id = db.relationship('Tag',
                              # secondary=tags,
                              # lazy='subquery',
                              # backref=db.backref('pages',
                                                 # lazy=True))
+                              #uselist=False)
 
     def __repr__(self):
         return '<CARD ID {}>'.format(self.id)
@@ -39,4 +43,5 @@ class Card(db.Model):
     # id = db.Column(db.Integer, primary_key=True)
     # name = db.Column(db.String(50))
     
-
+    # def __repr__(self):
+        # return '<TAG Name {}>'.format(self.self.name)
