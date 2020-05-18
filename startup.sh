@@ -28,6 +28,8 @@ elif [ $answer == "shell" ];then
     export FLASK_ENV=development
     export FLASK_APP=shell_context.py
     flask shell
+elif [ $answer == "test" ];then
+    echo "not set yet"
 else
     echo "Unknow option: $answer"
 fi

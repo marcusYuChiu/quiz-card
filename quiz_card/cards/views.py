@@ -33,9 +33,14 @@ def create():
     return render_template('card_views/create_card.html', form=form) 
 
 
-@blueprint.route('/practice')
+@blueprint.route('/practice_type')
+def practice_type():
+    return render_template('card_views/practice_type.html')
+
+
+@blueprint.route('/practice/<string:color>')
 def practice():
-    return render_template('card_views/practice.html')
+    return 
 
 
 @blueprint.route('/result')

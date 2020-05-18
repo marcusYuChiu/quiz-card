@@ -3,7 +3,6 @@ from datetime import datetime
 
 
 from quiz_card.extensions import db
-from quiz_card.timer.models import Timers
 
 # tags = db.Table('tags',
     # db.Column('tag_id', db.Integer, db.ForeignKey('tag.id'), primary_key=True),
