@@ -44,8 +44,8 @@ class Loader:
     def load(self):
         # get data with color which client offer
         self.data = (Card.query.filter(Card.memory_status == self.color)
-                               # data is selected by it's create time which minus 3 and
-                               # weight is lower than 70
+                               # data is selected by it's create time which is minused by 3
+                               # and weight is lower than 70
                                .filter((Card.created_time > get_date(3)) |
                                        (Card.weight < 70.0))
                                .order_by(Card.id.desc()))
