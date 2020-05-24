@@ -19,10 +19,13 @@ class MemoryStatus(enum.Enum):
 class Card(db.Model):
     __tablename__ = 'card'
     id = db.Column(db.Integer, primary_key=True)
-    question = db.Column(db.String(255))
-    answer = db.Column(db.String(255))
-    link = db.Column(db.String(255), nullable=True)
-    created_time = db.Column(db.DateTime, default=datetime.utcnow())
+    question = db.Column(db.String(255), nullable=False)
+    answer = db.Column(db.String(255), nullable=False)
+    link = db.Column(db.String(255), nullable=False)
+    created_time = db.Column(db.DateTime,
+                             default=datetime.utcnow(),
+                             nullable=False)
+    weight = db.Column(db.Float(1), default=0, nullable=False)
     memory_status = db.Column(db.Enum(MemoryStatus),
                               default=MemoryStatus.blue,
                               nullable=False)
