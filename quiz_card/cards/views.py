@@ -5,7 +5,7 @@ from flask import Blueprint, render_template, redirect, url_for
 
 
 from .forms import CreateForm
-from .models import Card
+from .models import Card, MemoryStatus
 from quiz_card.extensions import db
 
 
@@ -33,14 +33,16 @@ def create():
     return render_template('card_views/create_card.html', form=form) 
 
 
-@blueprint.route('/practice_type')
-def practice_type():
-    return render_template('card_views/practice_type.html')
+@blueprint.route('/menu')
+def menu():
+    return render_template('card_views/menu.html')
 
 
-@blueprint.route('/practice/<string:color>')
-def practice():
-    return 
+@blueprint.route('/menu/<string:color>')
+def practice_menu_color(color):
+    if color in [m.value for m in MemoryStatus]:
+        return render_template('card_views/color.html', color=color)
+    return "We do not have this color"
 
 
 @blueprint.route('/result')

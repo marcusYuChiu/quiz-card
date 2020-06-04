@@ -1,9 +1,12 @@
 import random
 
 
+from flask_sqlalchemy import BaseQuery
+
+
 from server import app
 from quiz_card.extensions import db
-from quiz_card.cards.models import Card
+from quiz_card.cards.models import Card, MemoryStatus
 from quiz_card.cards.component import loader
 
 
@@ -28,13 +31,18 @@ def gen_data(number):
     return
 
 
-def display(*args, **kwargs):
+def format_data(model, *args):
     '''
-    Calling the fuction with argument like "question" for card model 
-    and it will be stored in "args". And it can be accessed 
+    Model 
+    Arguments in args should match the attributes from models.
     '''
     output = []
-    for line in kwargs['model'].query.all():
+    if isinstance(model, BaseQuery):
+        data = model
+    else:
+        data = model.query.all()
+
+    for line in data:
         formatted_line = ''
         for attr in range(len(args)):
             formatted_line += ('{} '.format(line.__dict__[args[attr]]))
@@ -48,7 +56,8 @@ def shell_context():
             'app': app,
             'db': db,
             'card': Card,
+            'memory_status': MemoryStatus,
             'gen_data': gen_data,
-            'display': display,
+            'format_data': format_data,
             'loader': loader
            }

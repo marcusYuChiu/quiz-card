@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="intro">
+    <p class="intro-content">
+        Each color button represents memory level. Press one of them to practice.
+    </p>
+</div>
+<!-- <div class="memory-type-container">
+    <div class="color-container">
+        <button class="memory-type-button" id="button-red">Very familiar</button>
+    </div>
+    <div class="color-container">
+        <button class="memory-type-button" id="button-green">Familiar</button>
+    </div>
+    <div class="color-container">
+        <button class="memory-type-button" id="button-yellow">A Little Sense</button>
+    </div>
+    <div class="color-container">
+        <button class="memory-type-button" id="button-blue">No Sense</button>
+    </div>
+</div> -->
+<div class="container">
+    <a href="http://127.0.0.1:5000/card/menu/red" class="color-link red">Very Familiar</a>
+    <a href="http://127.0.0.1:5000/card/menu/green" class="color-link green">Familiar</a>
+    <a href="http://127.0.0.1:5000/card/menu/yellow" class="color-link yellow">A Little Sence</a>
+    <a href="http://127.0.0.1:5000/card/menu/blue" class="color-link blue">No Sence</a>
+</div>
+{% endblock %}

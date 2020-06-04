@@ -1,4 +1,5 @@
 import os
+import tempfile
 
 _basedir = os.path.abspath(os.path.dirname(__file__))
 
@@ -11,3 +12,4 @@ class Config:
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 
 del os
+del tempfile

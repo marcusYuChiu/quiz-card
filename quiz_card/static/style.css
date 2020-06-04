@@ -4,6 +4,7 @@ ul {
     padding: 0;
     overflow: hidden;
     background-color: #333;
+    opacity: 0.9;
 }
 
 li {
@@ -13,14 +14,19 @@ li {
 li a {
     display: block;
     padding: 14px 16px;
+    color: cornsilk;
     text-align: center;
     font-size:25px;
-    color: white;
+    text-decoration: none;
+}
+
+li a:link {
     text-decoration: none;
 }
 
 li a:hover {
-    background-color: rgb(76, 57, 160);
+    background-color: black;
+    color: cornsilk;
 }
 
 .card {
@@ -39,49 +45,63 @@ li a:hover {
 }
 
 .intro {
+    position: absolute;
     width:20rem;
-    margin-top: 3rem;
-    margin-bottom: 3rem;
-    margin-left: 540px;
+    top: 11.5%;
+    left: 37%;
     text-align: center;
     font-size: 25px;
     font-style: italic;
     font-family: serif;
 }
 
-.memory-type-container {
-    width: 35rem;
-    margin-left: 450px;
+.container {
+    position: absolute;
+    left: 8.2%;
+    top: 28%;
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 224px 224px;
+    grid-row-gap: 10px;
+    grid-column-gap: 26px;
+    justify-content: center;
 }
 
-.color-container {
-    float: left;
-}
-
-.memory-type-button {
+.color-link {
+    grid-column: span 1;
     height: 15rem;
     width: 15rem;
-    margin: 5px;
     font-size: 30px;
+    font-weight: bold;
     font-family: serif;
-    /* color: black; */
+    justify-content: center;
     color: cornsilk;
+    opacity: .8;
     border: none;
 }
 
-#button-red {
+.color-link:link {
+    line-height: 14rem;
+    text-decoration: none;
+    text-align: center;
+}
+
+.color-link:hover {
+    color:#333;
+}
+
+.red {
     background-color: indianred;
 }
 
-#button-green {
+.green {
     background-color: teal;
 }
 
-#button-yellow {
-    /* background-color: tan; */
+.yellow {
     background-color: peru;
 }
 
-#button-blue {
+.blue {
     background-color: steelblue;
 }
